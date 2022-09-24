@@ -26,6 +26,10 @@ class SportCar extends Car {
 class Truck extends Car {
   public size: number
   private _oil: number
+  static getCarType: string = 'truck'
+  static getInfo(): void {
+    console.log('Truck is a durable type of car')
+  }
 
   constructor(name: string, weight: number, size: number) {
     super(name, weight)
@@ -49,3 +53,7 @@ class Truck extends Car {
 const myTruck = new Truck('test', 20, 20)
 myTruck.oil = 99
 console.log(myTruck.oil)
+
+// using static
+console.log(Truck.getCarType)
+Truck.getInfo()
