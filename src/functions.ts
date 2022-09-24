@@ -30,3 +30,24 @@ const loveCalculator: Relationship = (a, b) => {
 }
 
 loveCalculator('Aldo', 'Jenny Blackpink')
+
+// default parameters
+const getFullName = (firstName: string, lastName: string = ''): string => {
+  return firstName + ' ' + lastName
+}
+
+console.log(getFullName('Aldo'))
+
+// optional parameters
+const printNames = (name: string, count?: number): void => {
+  if(count) {
+    for(let i=0; i < count; i++) {
+      console.log(name)
+    }
+    return
+  }
+
+  console.log(name)
+}
+
+printNames('Aldo Bangun', 2)
